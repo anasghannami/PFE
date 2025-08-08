@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Thé Fumé</title>
+
+    <link rel="shortcut icon" href="../principale/images/logotitre2.png" type="image/x-icon" />
+
+    <!-- Lightbox Pupup -->
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../principale/style.css">
+
+</head>
+
+<body class="gallery">
+    <!-- Navbar Section Start -->
+    <header id="full_nav">
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="../principale/index.html">
+                        <img decoding="async" src="../principale/images/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                        <i class="fas fa-stream navbar-toggler-icon"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thé</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tisane</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../principale/accessoires2.html">Accessoires</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button">
+                                    Nos Produits
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="../Nos produits/produitnoir.html"><img
+                                                src="../principale/tisathe/thes/noir/the-noir.svg" alt=""> &ensp;Thé
+                                            noir</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitvert.html"><img
+                                                src="../principale/tisathe/thes/vert/the-vert.svg" alt=""> &ensp;Thé
+                                            vert</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitblanc.html"><img
+                                                src="../principale/tisathe/thes/blanc/the-blanc.svg" alt=""> &ensp;Thé
+                                            blanc</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitmatcha.html"><img
+                                                src="../principale/tisathe/thes/matcha/the-matcha.svg" alt=""> &ensp;Thé
+                                            matcha</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitfumer.html"><img
+                                                src="../principale/tisathe/thes/fumer/the-fume.svg" alt=""> &ensp;Thé
+                                            Fumé</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitaromatiser.html"><img
+                                                src="../principale/tisathe/thes/noir/the-noir.svg" alt=""> &ensp;Thé
+                                            Aromatisé</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitPuerh.html"><img
+                                                src="../principale/tisathe/thes/PuErh/the-pu-erh.svg" alt=""> &ensp;Thé
+                                            PuErh</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitOolong.html"><img
+                                                src="../principale/tisathe/thes/Oolong/the-oollong.svg" alt="">
+                                            &ensp;Thé
+                                            Oolong</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitRooibos.html"><img
+                                                src="../principale/tisathe/tisanes/Rooibos/Rooibos.svg" alt="">
+                                            &ensp;Tisane
+                                            Rooibos</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitThym.html"><img
+                                                src="../principale/tisathe/tisanes/Thym/Thym.svg" alt=""> &ensp;Tisane
+                                            Thym</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitCamomille.html"><img
+                                                src="../principale/tisathe/tisanes/Camomille/Camomille.svg" alt="">
+                                            &ensp;Tisane
+                                            Camomille</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitVerveine.html"><img
+                                                src="../principale/tisathe/tisanes/Verveine/Vervene.svg" alt="">
+                                            &ensp;Tisane
+                                            Verveine</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contact/contact1.php">Contact</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="cart-icon ms-lg-3" id="openCart">
+                            <i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header><br><br><br><br><br><br>
+    <style>
+        /* Styles pour les items du panier */
+        #cart-items .cart-item {
+            font-size: 1.2rem;
+            padding: 12px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        #cart-items .cart-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        #cart-items .cart-item label {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        #cart-items .cart-item .form-check-input {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        #cart-items .cart-item button.remove-item {
+            font-size: 1.1rem;
+            padding: 6px 10px;
+        }
+    </style>
+    <section class="landing_product_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Thé Fumé</h2>
+                    <p class="section-subtitle">Les thés fumés sont des thés noirs dont les feuilles ont été torsadées
+                        puis fumées. Ils doivent leur existence et leur spécificité à un heureux accident.
+                    </p>
+                    <div class="col-sm-12 text-center mt-4">
+                        <a href="../thes/fumer.html" class="btn main-btn">savoir plus</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row mx-0">
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/fumer/dharamsala.webp"
+                                class="img-fluid" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Dharamsala</h3>
+                            <span>18,00 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Dharamsala"
+                                data-price="18.00 €/100g"
+                                data-image="../principale/tisathe/thes/fumer/dharamsala.webp">Ajouter au panier</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/fumer/spirit.webp"
+                                class="img-fluid" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Spirit of smoke</h3>
+                            <span>16,00 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Spirit of smoke"
+                                data-price="16.00 €/100g"
+                                data-image="../principale/tisathe/thes/fumer/spirit.webp">Ajouter au panier</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/fumer/xioa.webp" class="img-fluid" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Xiao Lapsang bio</h3>
+                            <span>16,00 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Xiao Lapsang bio"
+                                data-price="16.00 €/100g"
+                                data-image="../principale/tisathe/thes/fumer/xioa.webp">Ajouter au panier</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Panier Modal -->
+            <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg"><!-- plus large -->
+                    <div class="modal-content">
+                        <div class="modal-header"
+                            style="background: linear-gradient(to right, #0f7404, #5cb917); color: white;">
+                            <h5 class="modal-title" style="font-size: 1.7rem;">🛒 Votre Panier</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="cart-items" style="font-size: 1.2rem;">
+                            <!-- Les articles du panier s'affichent ici dynamiquement -->
+                        </div>
+                        <div class="me-auto" style="font-size: 1.6rem; font-weight: bold; margin-left: 10px; ">
+                            Total : <span id="cart-total-price">0.00</span> €
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-sm main-btn px-3 py-2" id="orderSelected"
+                                style="font-size: 14px;">
+                                <i class="fas fa-check" style="font-size: 1rem;"></i> FINALISER MA COMMANDE
+                            </button>
+                            <button type="button" class="btn btn-sm main-btn px-3 py-2"
+                                style="background: #ccc; color: #333; font-size: 14px;" data-bs-dismiss="modal">
+                                CONTINUER MES ACHATS
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire Client Modal -->
+            <div class="modal fade" id="clientModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-md"><!-- taille moyenne -->
+                    <form id="client-form" class="modal-content" style="font-size: 1.5rem;">
+                        <div class="modal-header"
+                            style="background: linear-gradient(to right, #0f7404, #5cb917); color: white;">
+                            <h5 class="modal-title" style="font-size: 1.6rem;">Finaliser la commande</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Produit sélectionné -->
+                            <input type="hidden" id="selected-product-name" name="produit" required>
+
+                            <!-- Infos client -->
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control form-control-lg" id="nom" name="nom" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">Numéro de téléphone</label>
+                                <input type="tel" class="form-control form-control-lg" id="telephone" name="telephone"
+                                    required pattern="[0-9]{8,15}" placeholder="Ex: 0600000000">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control form-control-lg" id="adresse" name="adresse"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="codepostal" class="form-label">Code Postal</label>
+                                <input type="text" class="form-control form-control-lg" id="codepostal"
+                                    name="codepostal" required pattern="\d{4,5}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ville" class="form-label">Ville</label>
+                                <input type="text" class="form-control form-control-lg" id="ville" name="ville"
+                                    required>
+                            </div>
+
+                            <!-- Choix de livraison -->
+                            <div class="mb-3" style="font-size: 1.5rem;">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <label class="form-label mb-0">Mode de réception :</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="livraison" id="livraison"
+                                                value="livraison" required>
+                                            <label class="form-check-label" for="livraison">Livraison</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="livraison" id="retrait"
+                                                value="retrait">
+                                            <label class="form-check-label" for="retrait">Retrait</label>
+                                        </div>
+                                    </div>
+                                    <div style="font-size:1.6rem; font-weight:bold; color:#0f7404;">
+                                        Total : <span id="client-total-price" style="font-size:1.6rem;">0.00</span> €
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accepter les conditions -->
+                            <div class="form-check mb-3" style="font-size: 1.rem;">
+                                <input class="form-check-input" type="checkbox" id="conditions" required>
+                                <label class="form-check-label" for="conditions">
+                                    J'accepte les conditions générales de vente
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn main-btn btn-lg" style="font-size: 1.2rem;">Valider la
+                                commande</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="footer_wrapper mt-3 mt-md-0">
+        <div class="container px-5 px-lg-0">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Tout savoir sur le thé</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="../thes/noir.html">Thé Noir</a></li>
+                        <li><a href="../thes/blanc.html">Thé Blanc</a></li>
+                        <li><a href="../thes/vert.html">Thé Vert</a></li>
+                        <li><a href="../thes/aromatise.html">Thé Aromatisé</a></li>
+                        <li><a href="../thes/fumer.html">Thé Fumé</a></li>
+                        <li><a href="../thes/matcha.html">Thé Matcha</a></li>
+                        <li><a href="../thes/Oolong.html">Thé Oolong</a></li>
+                        <li><a href="../thes/PuErh.html">Thé PuErh</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Tout savoir sur le Tisane</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="../tisanes/Camomille.html">Camomille</a></li>
+                        <li><a href="../tisanes/Rooibos.html">Rooibos</a></li>
+                        <li><a href="../tisanes/thym.html">Thym</a></li>
+                        <li><a href="../tisanes/Verveine.html">Verveine</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Tous nos conseils</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Astuces</a></li>
+                        <li><a href="#">Santé</a></li>
+                        <li><a href="#">Gastronomie</a></li>
+                        <li><a href="#">Comparaison</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>rechercher</h5>
+                    <div class="form-group mb-4">
+                        <input type="search" class="form-control bg-transparent" placeholder="recherchcer...">
+                        <button type="submit" class="btn main-btn">Entrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section">
+            <p><a href="../principale/index.html">TaZzA</a></p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Lightbox Pupup -->
+    <script src="js/lightbox.js"></script>
+
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+
+    <script src="../principale/script.js"></script>
+    <!-- Script Panier et Formulaire -->
+    <script>
+        // Synchroniser le prix total du panier dans le modal client
+        function updateClientTotalPrice() {
+            const total = document.getElementById("cart-total-price");
+            const clientTotal = document.getElementById("client-total-price");
+            if (total && clientTotal) {
+                clientTotal.textContent = total.textContent;
+            }
+        }
+
+        // Charger le panier depuis localStorage ou initialiser vide
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function saveCart() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = "<p>Votre panier est vide.</p>";
+            } else {
+                cart.forEach((item, i) => {
+
+                    const row = document.createElement("div");
+                    row.className = "cart-item d-flex align-items-center border-bottom pb-2 mb-2";
+
+
+                    // Générer les options du select quantité (1 à 20)
+                    let qtyOptions = '';
+                    for (let q = 1; q <= 20; q++) {
+                        qtyOptions += `<option value="${q}"${q === item.quantity ? ' selected' : ''}>${q}</option>`;
+                    }
+
+                    row.innerHTML = `
+        <input class="form-check-input me-2 cart-checkbox" type="checkbox" value="${i}" id="check-${i}">
+        <img src="${item.image}" alt="${item.name}" class="me-2" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px;">
+        <div class="flex-grow-1 d-flex align-items-center">
+            <label class="form-check-label mb-0" for="check-${i}" style="flex:1;">
+                <strong>${item.name}</strong> <span class="product-qty-value" style="font-weight:bold; color:#0f7404;">(${item.quantity})</span><br><small>${item.price}</small>
+            </label>
+            <select class="form-select form-select-sm ms-3 me-3 cart-qty-select fw-bold" data-index="${i}" style="width:70px; font-size: 12px">${qtyOptions}</select>
+        </div>
+        <button class="btn btn-sm btn-outline-danger remove-item ms-2" data-index="${i}">
+            <i class="fas fa-trash"></i>
+        </button>
+    `;
+
+                    // 👉 Ajouter l'écouteur pour recalculer le total à chaque sélection
+                    row.querySelector(".cart-checkbox").addEventListener("change", updateCartTotal);
+
+                    cartItems.appendChild(row);
+                });
+
+                // Gestion du changement de quantité via le select
+                cartItems.querySelectorAll('.cart-qty-select').forEach(select => {
+                    select.addEventListener('change', function () {
+                        const idx = parseInt(this.getAttribute('data-index'));
+                        const newQty = parseInt(this.value);
+                        if (!isNaN(idx) && cart[idx] && newQty > 0) {
+                            cart[idx].quantity = newQty;
+                            // Mettre à jour uniquement le nombre entre parenthèses sans recharger tout le panier
+                            const qtySpan = select.closest('.d-flex.align-items-center').querySelector('label .product-qty-value');
+                            if (qtySpan) qtySpan.textContent = `(${newQty})`;
+                            updateCartTotal();
+                            saveCart();
+                        }
+                    });
+                });
+
+            }
+
+            const countElem = document.querySelector(".cart-count");
+            if (countElem) countElem.textContent = cart.length;
+            updateCartTotal();
+
+
+            saveCart(); // Sauvegarder chaque fois qu'on met à jour l'affichage
+        }
+
+        // Ajouter au panier
+        document.querySelectorAll(".add-to-cart").forEach(btn => {
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+                const name = btn.getAttribute("data-product");
+                const price = btn.getAttribute("data-price");
+                const image = btn.getAttribute("data-image");
+
+                const existing = cart.find(item => item.name === name);
+                if (existing) {
+                    existing.quantity++;
+                } else {
+                    cart.push({ name, price, image, quantity: 1 });
+                }
+
+                updateCartDisplay();
+            });
+        });
+
+        // Ouvrir modal panier
+        const openCartBtn = document.getElementById("openCart");
+        if (openCartBtn) {
+            openCartBtn.addEventListener("click", e => {
+                e.preventDefault();
+                updateCartDisplay();
+                const cartModal = new bootstrap.Modal(document.getElementById("cartModal"));
+                cartModal.show();
+            });
+        }
+
+        // Quand on ouvre le modal client, mettre à jour le prix total affiché
+        const orderSelectedBtn = document.getElementById("orderSelected");
+        if (orderSelectedBtn) {
+            orderSelectedBtn.addEventListener("click", () => {
+                setTimeout(updateClientTotalPrice, 100); // attendre l'ouverture du modal
+            });
+        }
+
+        // Supprimer un article du panier
+        document.getElementById("cart-items").addEventListener("click", function (e) {
+            const btnRemove = e.target.closest(".remove-item");
+            if (btnRemove) {
+                const idx = parseInt(btnRemove.getAttribute("data-index"));
+                if (!isNaN(idx)) {
+                    cart.splice(idx, 1);
+                    updateCartDisplay();
+                }
+            }
+        });
+
+        // Commander la sélection
+        document.getElementById("orderSelected").addEventListener("click", () => {
+            const selectedIndexes = Array.from(document.querySelectorAll(".cart-checkbox:checked"))
+                .map(cb => parseInt(cb.value))
+                .filter(i => !isNaN(i) && cart[i]);
+
+            if (selectedIndexes.length === 0) {
+                return alert("Veuillez sélectionner au moins un produit à commander.");
+            }
+
+            const selectedItems = selectedIndexes.map(i => cart[i]);
+            document.getElementById("selected-product-name").value = JSON.stringify(selectedItems);
+
+            const clientModal = new bootstrap.Modal(document.getElementById("clientModal"));
+            clientModal.show();
+        });
+
+
+        // compteur des prix
+        function updateCartTotal() {
+            let total = 0;
+            const checkboxes = document.querySelectorAll(".cart-checkbox:checked");
+            checkboxes.forEach(cb => {
+                const index = parseInt(cb.value);
+                if (!isNaN(index) && cart[index]) {
+                    const item = cart[index];
+                    total += parseFloat(item.price) * item.quantity;
+                }
+            });
+
+            document.getElementById("cart-total-price").textContent = total.toFixed(2);
+            // Mettre à jour aussi le total dans le modal client si ouvert
+            const clientTotal = document.getElementById("client-total-price");
+            if (clientTotal) clientTotal.textContent = total.toFixed(2);
+        }
+
+
+
+
+        // Soumission du formulaire client
+        document.getElementById("client-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const data = new FormData(e.target);
+
+            const nom = data.get("nom");
+            const email = data.get("email");
+            const telephone = data.get("telephone");
+            const adresse = data.get("adresse");
+            const codepostal = data.get("codepostal");
+            const ville = data.get("ville");
+            const livraison = data.get("livraison");
+            const produit = data.get("produit");
+
+
+            // Récupérer le total affiché dans le modal client
+            const total = document.getElementById("client-total-price")?.textContent || "0.00";
+            const payload = { nom, email, telephone, adresse, codepostal, ville, livraison, produit, total };
+
+            fetch("http://localhost/Test/projet-pfe/backend/commande_fichier.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                    return response.json();
+                })
+                .then(result => {
+                    if (result.success) {
+                        alert(`Merci ${nom} !
+Votre commande a bien été enregistrée.
+Produits : ${produit}
+Livraison : ${livraison}
+Adresse : ${adresse}, ${codepostal} ${ville}
+Téléphone : ${telephone}
+Total : ${total} €`); // Ajoutez ici la date si besoin
+                        const clientModal = bootstrap.Modal.getInstance(document.getElementById("clientModal"));
+                        clientModal.hide();
+                        e.target.reset();
+                        // Vider le panier et localStorage après commande
+                        cart.length = 0; // vider array
+                        saveCart();
+                        updateCartDisplay();
+                    } else {
+                        alert("Erreur lors de la commande: " + (result.message || "Erreur inconnue"));
+                    }
+                })
+                .catch(error => {
+                    alert("Erreur réseau ou serveur : " + error.message);
+                });
+        });
+
+        // Initialiser l'affichage du panier au chargement de la page
+        document.addEventListener("DOMContentLoaded", updateCartDisplay);
+    </script>
+</body>
+
+
+</html>
