@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaZzA</title>
+    <link rel="shortcut icon" href="../principale/images/logotitre2.png" type="image/x-icon" />
+
+    <!-- Lightbox Pupup -->
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../principale/style.css">
+    <link rel="stylesheet" href="../principale/responsive.css">
+</head>
+<style>
+    /* Styles pour les items du panier */
+    #cart-items .cart-item {
+        font-size: 1.2rem;
+        padding: 12px 0;
+        border-bottom: 2px solid #ddd;
+    }
+
+    #cart-items .cart-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    #cart-items .cart-item label {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    #cart-items .cart-item .form-check-input {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    #cart-items .cart-item button.remove-item {
+        font-size: 1.1rem;
+        padding: 6px 10px;
+    }
+</style>
+
+<body>
+
+
+    <!-- Navbar Section Start -->
+    <header id="full_nav">
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img decoding="async" src="../principale/images/logo.png" alt="Logo TaZzA">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-stream navbar-toggler-icon"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Thé</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tisane</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../principale/accessoires2.html">Accessoires</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Nos Produits
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="../Nos produits/produitnoir.html"><img
+                                                src="../principale/tisathe/thes/noir/the-noir.svg" alt=""> &ensp;Thé
+                                            noir</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitvert.html"><img
+                                                src="../principale/tisathe/thes/vert/the-vert.svg" alt=""> &ensp;Thé
+                                            vert</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitblanc.html"><img
+                                                src="../principale/tisathe/thes/blanc/the-blanc.svg" alt=""> &ensp;Thé
+                                            blanc</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitmatcha.html"><img
+                                                src="../principale/tisathe/thes/matcha/the-matcha.svg" alt=""> &ensp;Thé
+                                            matcha</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitfumer.html"><img
+                                                src="../principale/tisathe/thes/fumer/the-fume.svg" alt=""> &ensp;Thé
+                                            Fumé</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitaromatiser.html"><img
+                                                src="../principale/tisathe/thes/noir/the-noir.svg" alt=""> &ensp;Thé
+                                            Aromatisé</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitPuerh.html"><img
+                                                src="../principale/tisathe/thes/PuErh/the-pu-erh.svg" alt=""> &ensp;Thé
+                                            PuErh</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitOolong.html"><img
+                                                src="../principale/tisathe/thes/Oolong/the-oollong.svg" alt="">
+                                            &ensp;Thé Oolong</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitRooibos.html"><img
+                                                src="../principale/tisathe/tisanes/Rooibos/Rooibos.svg" alt="">
+                                            &ensp;Tisane Rooibos</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitThym.html"><img
+                                                src="../principale/tisathe/tisanes/Thym/Thym.svg" alt=""> &ensp;Tisane
+                                            Thym</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitCamomille.html"><img
+                                                src="../principale/tisathe/tisanes/Camomille/Camomille.svg" alt="">
+                                            &ensp;Tisane Camomille</a></li>
+                                    <li><a class="dropdown-item" href="../Nos produits/produitVerveine.html"><img
+                                                src="../principale/tisathe/tisanes/Verveine/Vervene.svg" alt="">
+                                            &ensp;Tisane Verveine</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contact/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="cart-icon ms-lg-3" id="openCart">
+                            <i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        /* Styles pour les items du panier */
+        #cart-items .cart-item {
+            font-size: 1.2rem;
+            padding: 12px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        #cart-items .cart-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        #cart-items .cart-item label {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        #cart-items .cart-item .form-check-input {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        #cart-items .cart-item button.remove-item {
+            font-size: 1.1rem;
+            padding: 6px 10px;
+        }
+    </style>
+    <!-- Navbar Section Exit -->
+
+    <!-- banner Section start -->
+    <section class="banner_section">
+        <div class="container">
+            <div id="banner-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <div class="banner-content">
+                                <h1>TaZza</h1><br>
+                                <h4>Tout savoir sur les thés et les tisanes</h4>
+                                <p>Ces deux boissons, thés et tisanes, sont aujourd'hui ancrées dans le quotidien pour
+                                    beaucoup d'individus et à travers de nombreuses cultures. On boit du thé sur tous
+                                    les
+                                    continents !</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+
+    <section class="landing_product_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Notre sélection</h2>
+                </div>
+            </div>
+            <div class="row mx-0">
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/fumer/dharamsala.webp"
+                                class="img-fluid" alt="Dharamsala" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Dharamsala</h3>
+                            <span>18,00 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Dharamsala"
+                                data-price="18.00 €/100g"
+                                data-image="../principale/tisathe/thes/fumer/dharamsala.webp">Ajouter au panier</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/fumer/spirit.webp" class="img-fluid"
+                                alt="Spirit of smoke" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Spirit of smoke</h3>
+                            <span>16,00 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Spirit of smoke"
+                                data-price="16.00 €/100g"
+                                data-image="../principale/tisathe/thes/fumer/spirit.webp">Ajouter au
+                                panier</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/noir/palnoir3.webp" class="img-fluid"
+                                alt="Montagne Bleue" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Montagne Bleue</h3>
+                            <span>14,20 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Montagne Bleue"
+                                data-price="14.20 €/100g"
+                                data-image="../principale/tisathe/thes/noir/palnoir3.webp">Ajouter au
+                                panier</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="../principale/tisathe/thes/vert/theetoiles.jpg" class="img-fluid"
+                                alt="Thé des Étoiles" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Thé des Étoiles</h3>
+                            <span>11,20 €/100g</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" class="btn main-btn add-to-cart" data-product="Thé des Étoiles"
+                                data-price="11.20 €/100g"
+                                data-image="../principale/tisathe/thes/vert/theetoiles.jpg">Ajouter au
+                                panier</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panier Modal -->
+            <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg"><!-- plus large -->
+                    <div class="modal-content">
+                        <div class="modal-header"
+                            style="background: linear-gradient(to right, #0f7404, #5cb917); color: white;">
+                            <h5 class="modal-title" style="font-size: 1.7rem;">🛒 Votre Panier</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="cart-items" style="font-size: 1.2rem;">
+                            <!-- Les articles du panier s'affichent ici dynamiquement -->
+                        </div>
+                        <div class="me-auto" style="font-size: 1.6rem; font-weight: bold; margin-left: 10px; ">
+                            Total : <span id="cart-total-price">0.00</span> €
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-sm main-btn px-3 py-2" id="orderSelected"
+                                style="font-size: 14px;">
+                                <i class="fas fa-check" style="font-size: 1rem;"></i> FINALISER MA COMMANDE
+                            </button>
+                            <button type="button" class="btn btn-sm main-btn px-3 py-2"
+                                style="background: #ccc; color: #333; font-size: 14px;" data-bs-dismiss="modal">
+                                CONTINUER MES ACHATS
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire Client Modal -->
+            <div class="modal fade" id="clientModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-md"><!-- taille moyenne -->
+                    <form id="client-form" class="modal-content" style="font-size: 1.5rem;">
+                        <div class="modal-header"
+                            style="background: linear-gradient(to right, #0f7404, #5cb917); color: white;">
+                            <h5 class="modal-title" style="font-size: 1.6rem;">Finaliser la commande</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Produit sélectionné -->
+                            <input type="hidden" id="selected-product-name" name="produit" required>
+
+                            <!-- Infos client -->
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control form-control-lg" id="nom" name="nom" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">Numéro de téléphone</label>
+                                <input type="tel" class="form-control form-control-lg" id="telephone" name="telephone"
+                                    required pattern="[0-9]{8,15}" placeholder="Ex: 0600000000">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control form-control-lg" id="adresse" name="adresse"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="codepostal" class="form-label">Code Postal</label>
+                                <input type="text" class="form-control form-control-lg" id="codepostal"
+                                    name="codepostal" required pattern="\d{4,5}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ville" class="form-label">Ville</label>
+                                <input type="text" class="form-control form-control-lg" id="ville" name="ville"
+                                    required>
+                            </div>
+
+                            <!-- Choix de livraison -->
+                            <div class="mb-3" style="font-size: 1.5rem;">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <label class="form-label mb-0">Mode de réception :</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="livraison" id="livraison"
+                                                value="livraison" required>
+                                            <label class="form-check-label" for="livraison">Livraison</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="livraison" id="retrait"
+                                                value="retrait">
+                                            <label class="form-check-label" for="retrait">Retrait</label>
+                                        </div>
+                                    </div>
+                                    <div style="font-size:1.6rem; font-weight:bold; color:#0f7404;">
+                                        Total : <span id="client-total-price" style="font-size:1.6rem;">0.00</span> €
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accepter les conditions -->
+                            <div class="form-check mb-3" style="font-size: 1.rem;">
+                                <input class="form-check-input" type="checkbox" id="conditions" required>
+                                <label class="form-check-label" for="conditions">
+                                    J'accepte les conditions générales de vente
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn main-btn btn-lg" style="font-size: 1.2rem;">Valider la
+                                commande</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="landing_about_section1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6 col-sm-8">
+                    <div class="about-content">
+                        <h2>Les types de thé.</h2>
+                        <div class="about-details">
+                            <br>
+                            <p>Le thé est une boisson très variés. Ils ont tous pour point
+                                commun de venir du même arbre, le Camellia sinensis. Mais chaque
+                                thé offre une palette unique de saveurs et de bienfaits pour la santé, résultant de
+                                divers
+                                procédés de fermentation et de traitement des feuilles</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/noir.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/noir/the-noir.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Noir</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/blanc.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/blanc/the-blanc.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Blanc</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/vert.html"><img decoding="async"
+                                            src="../principale/tisathe/thes/vert/the-vert.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Vert</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/aromatise.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/aromatise/the-aromatise.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Aromatisé</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/fumer.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/fumer/the-fume.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Fumé</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/matcha.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/matcha/the-matcha.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Matcha</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/Oolong.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/Oolong/the-oollong.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé Oolong</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../thes/PuErh.html"> <img decoding="async"
+                                            src="../principale/tisathe/thes/PuErh/the-pu-erh.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Thé PuErh</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="landing_about_section2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6 col-sm-8">
+                    <div class="about-content">
+                        <h2>Les bienfaits de la tisane.</h2>
+                        <div class="about-details">
+                            <br>
+                            <p>Les tisanes sont réputées pour leurs effets bénéfiques sur la santé, qui varient selon
+                                les plantes utilisées.</p>
+                            <p>Elles peuvent aider à la relaxation et à l'amélioration de la qualité du sommeil,
+                                soutenir la digestion, soulager des maux tels que les douleurs
+                                menstruelles ou les maux de tête, et contribuer à la détoxification de l'organisme.</p>
+                            <p>Des tisanes comme la camomille et la valériane sont réputées pour leurs vertus
+                                apaisantes,
+                                favorisant un sommeil réparateur. Pour la digestion, des options telles que la menthe
+                                poivrée et le
+                                gingembre aident à apaiser le système digestif, réduisant les ballonnements et les
+                                nausées.
+                                Les tisanes contenant des plantes comme l'achillée millefeuille ou le curcuma offrent
+                                des propriétés anti-inflammatoires et analgésiques, utiles contre les douleurs
+                                menstruelles ou articulaires.
+                            </p>
+                            <p>Les propriétés anti-inflammatoires, antioxydantes, et diurétiques de certaines plantes
+                                font des tisanes de véritables alliées pour le bien-être général.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../tisanes/Camomille.html"> <img decoding="async"
+                                            src="../principale/tisathe/tisanes/Camomille/Camomille.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Tisane Camomille</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../tisanes/Rooibos.html"> <img decoding="async"
+                                            src="../principale/tisathe/tisanes/Rooibos/Rooibos.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Tisane Rooibos</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../tisanes/thym.html"> <img decoding="async"
+                                            src="../principale/tisathe/tisanes/Thym/Thym.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Tisane Thym</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <a href="../tisanes/Verveine.html"> <img decoding="async"
+                                            src="../principale/tisathe/tisanes/Verveine/Vervene.svg"></a>
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Tisane Verveine</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="testimonial_section">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Nos conseils.</h2>
+                    <p class="section-subtitle">On vous partage nos astuces sur les thés et les tisanes pour leur
+                        dégustation ou toutes autres informations importantes à connaitre !</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-md-10">
+                    <div id="testimonial-slider" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button data-bs-target="#testimonial-slider" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button data-bs-target="#testimonial-slider" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button data-bs-target="#testimonial-slider" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-sm-flex row">
+                                    <div class="profile-box col-sm-5">
+                                        <img decoding="async"
+                                            src="../principale/tisathe/Conseils/boire-du-the-le-soir-1024x631.webp"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="card  col-sm-7">
+                                        <div class="desc-box">
+                                            <p class="fst-italic">Le thé, avec sa richesse en saveurs et ses bienfaits
+                                                reconnus, se positionne comme l'une des boissons les plus populaires et
+                                                appréciées à travers le monde.
+
+                                                Souvent perçu comme une alternative plus saine au café, cela conduit
+                                                naturellement à la question de savoir si le thé pour enfant existe et
+                                                peut être intégré dans leur alimentation.</p>
+                                            <br><br>
+                                            <img decoding="async" src="../principale/tisathe/thes/noir/the-noir.svg"
+                                                class="float-end" width="60" height="60">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-sm-flex row">
+                                    <div class="profile-box col-sm-5">
+                                        <img decoding="async"
+                                            src="../principale/tisathe/Conseils/difference-entre-the-tisane-et-infusion-1024x683.webp"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="card  col-sm-7">
+                                        <div class="desc-box">
+                                            <p class="fst-italic">Les thés, tisanes et infusions occupent une place de
+                                                choix dans notre quotidien. Ces termes utilisés pour désigner ces
+                                                boissons chaudes sont souvent interchangés. Pourtant, il désigne en
+                                                réalité des boissons et méthodes de préparation spécifiques.
+
+                                                On vous explique la différence entre thé, tisane et infusion.</p>
+                                            <br><br>
+                                            <img decoding="async" src="../principale/tisathe/thes/matcha/the-matcha.svg"
+                                                class="float-end" width="60" height="60">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-sm-flex row">
+                                    <div class="profile-box col-sm-5">
+                                        <img decoding="async"
+                                            src="../principale/tisathe/Conseils/est-ce-que-le-the-se-perime-1024x683.webp"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="card  col-sm-7">
+                                        <div class="desc-box">
+                                            <p class="fst-italic">Le thé est riche en vitamines, minéraux et
+                                                antioxydants, qui permet de jouer un rôle dans le renforcement du
+                                                système immunitaire et la lutte contre le stress oxydatif.
+
+                                                De manière générale, le thé aide à protéger les cellules contre les
+                                                dommages causés par les radicaux libres, améliorant ainsi la santé
+                                                générale et prévenant de nombreuses maladies.</p>
+                                            <br><br>
+                                            <img decoding="async"
+                                                src="../principale/tisathe/tisanes/Camomille/Camomille.svg"
+                                                class="float-end" width="60" height="60">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--testimonial Section Exit -->
+
+    <!-- Gallery Section Start-->
+    <section class="accessoires">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Les accessoires</h2>
+                    <p class="section-subtitle">La composition du thé et Tisane est finalement assez simple : de l'eau
+                        chaude et du thé. Pourtant il existe de nombreux accessoires dédiés à la préparation, la
+                        dégustation ou même le rangement du thé et Tisane.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="../principale/tisathe/Accessoires/accessoires-pour-le-the-1.webp" data-lightbox="image"
+                        data-title="Lemon">
+                        <img decoding="async" src="../principale/tisathe/Accessoires/accessoires-pour-le-the-1.webp"
+                            class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="../principale/tisathe/Accessoires/accessoires-pour-le-the-matcha.webp"
+                        data-lightbox="image" data-title="Lemon">
+                        <img decoding="async"
+                            src="../principale/tisathe/Accessoires/accessoires-pour-le-the-matcha.webp"
+                            class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="../principale/tisathe/Accessoires/bouilloire-electrique-pour-le-the.webp"
+                        data-lightbox="image" data-title="Lemon">
+                        <img decoding="async"
+                            src="../principale/tisathe/Accessoires/bouilloire-electrique-pour-le-the.webp"
+                            class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="../principale/tisathe/Accessoires/boule-a-the.webp" data-lightbox="image"
+                        data-title="Lemon">
+                        <img decoding="async" src="../principale/tisathe/Accessoires/boule-a-the.webp"
+                            class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="../principale/tisathe/Accessoires/cuillere-a-the.webp" data-lightbox="image"
+                        data-title="Lemon">
+                        <img decoding="async" src="../principale/tisathe/Accessoires/cuillere-a-the.webp"
+                            class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="../principale/tisathe/Accessoires/infuseur-the-filtre-the.webp" data-lightbox="image"
+                        data-title="Lemon">
+                        <img decoding="async" src="../principale/tisathe/Accessoires/infuseur-the-filtre-the.webp"
+                            class="img-fluid rounded-3">
+                    </a>
+                </div>
+
+                <div class="col-sm-12 text-center mt-4">
+                    <a href="../principale/accessoires2.html" class="btn main-btn">Voir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer_wrapper mt-3 mt-md-0">
+        <div class="container px-5 px-lg-0">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Tout savoir sur le thé</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="../thes/noir.html">Thé Noir</a></li>
+                        <li><a href="../thes/blanc.html">Thé Blanc</a></li>
+                        <li><a href="../thes/vert.html">Thé Vert</a></li>
+                        <li><a href="../thes/aromatise.html">Thé Aromatisé</a></li>
+                        <li><a href="../thes/fumer.html">Thé Fumé</a></li>
+                        <li><a href="../thes/matcha.html">Thé Matcha</a></li>
+                        <li><a href="../thes/Oolong.html">Thé Oolong</a></li>
+                        <li><a href="../thes/PuErh.html">Thé PuErh</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Tout savoir sur le Tisane</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="../tisanes/Camomille.html">Camomille</a></li>
+                        <li><a href="../tisanes/Rooibos.html">Rooibos</a></li>
+                        <li><a href="../tisanes/thym.html">Thym</a></li>
+                        <li><a href="../tisanes/Verveine.html">Verveine</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Guide du thé</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Bien préparer son thé</a></li>
+                        <li><a href="#">Santé</a></li>
+                        <li><a href="#">Gastronomie</a></li>
+                        <li><a href="#">Comparaison</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Rechercher</h5>
+                    <div class="form-group mb-4">
+                        <input type="search" class="form-control bg-transparent" placeholder="rechercher...">
+                        <button type="submit" class="btn main-btn">Entrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section">
+            <p><a href="../principale/index.html">TaZzA</a></p>
+        </div>
+    </section>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Lightbox Pupup -->
+    <script src="js/lightbox.js"></script>
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../principale/script.js"></script>
+
+    <!-- Script Panier et Formulaire -->
+    <script>
+        // Synchroniser le prix total du panier dans le modal client
+        function updateClientTotalPrice() {
+            const total = document.getElementById("cart-total-price");
+            const clientTotal = document.getElementById("client-total-price");
+            if (total && clientTotal) {
+                clientTotal.textContent = total.textContent;
+            }
+        }
+
+        // Charger le panier depuis localStorage ou initialiser vide
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function saveCart() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = "<p>Votre panier est vide.</p>";
+            } else {
+                cart.forEach((item, i) => {
+
+                    const row = document.createElement("div");
+                    row.className = "cart-item d-flex align-items-center border-bottom pb-2 mb-2";
+
+
+                    // Générer les options du select quantité (1 à 20)
+                    let qtyOptions = '';
+                    for (let q = 1; q <= 20; q++) {
+                        qtyOptions += `<option value="${q}"${q === item.quantity ? ' selected' : ''}>${q}</option>`;
+                    }
+
+                    row.innerHTML = `
+        <input class="form-check-input me-2 cart-checkbox" type="checkbox" value="${i}" id="check-${i}">
+        <img src="${item.image}" alt="${item.name}" class="me-2" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px;">
+        <div class="flex-grow-1 d-flex align-items-center">
+            <label class="form-check-label mb-0" for="check-${i}" style="flex:1;">
+                <strong>${item.name}</strong> <span class="product-qty-value" style="font-weight:bold; color:#0f7404;">(${item.quantity})</span><br><small>${item.price}</small>
+            </label>
+            <select class="form-select form-select-sm ms-3 me-3 cart-qty-select fw-bold" data-index="${i}" style="width:70px; font-size: 12px">${qtyOptions}</select>
+        </div>
+        <button class="btn btn-sm btn-outline-danger remove-item ms-2" data-index="${i}">
+            <i class="fas fa-trash"></i>
+        </button>
+    `;
+
+                    // 👉 Ajouter l'écouteur pour recalculer le total à chaque sélection
+                    row.querySelector(".cart-checkbox").addEventListener("change", updateCartTotal);
+
+                    cartItems.appendChild(row);
+                });
+
+                // Gestion du changement de quantité via le select
+                cartItems.querySelectorAll('.cart-qty-select').forEach(select => {
+                    select.addEventListener('change', function () {
+                        const idx = parseInt(this.getAttribute('data-index'));
+                        const newQty = parseInt(this.value);
+                        if (!isNaN(idx) && cart[idx] && newQty > 0) {
+                            cart[idx].quantity = newQty;
+                            // Mettre à jour uniquement le nombre entre parenthèses sans recharger tout le panier
+                            const qtySpan = select.closest('.d-flex.align-items-center').querySelector('label .product-qty-value');
+                            if (qtySpan) qtySpan.textContent = `(${newQty})`;
+                            updateCartTotal();
+                            saveCart();
+                        }
+                    });
+                });
+
+            }
+
+            const countElem = document.querySelector(".cart-count");
+            if (countElem) countElem.textContent = cart.length;
+            updateCartTotal();
+
+
+            saveCart(); // Sauvegarder chaque fois qu'on met à jour l'affichage
+        }
+
+        // Ajouter au panier
+        document.querySelectorAll(".add-to-cart").forEach(btn => {
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+                const name = btn.getAttribute("data-product");
+                const price = btn.getAttribute("data-price");
+                const image = btn.getAttribute("data-image");
+
+                const existing = cart.find(item => item.name === name);
+                if (existing) {
+                    existing.quantity++;
+                } else {
+                    cart.push({ name, price, image, quantity: 1 });
+                }
+
+                updateCartDisplay();
+            });
+        });
+
+        // Ouvrir modal panier
+        const openCartBtn = document.getElementById("openCart");
+        if (openCartBtn) {
+            openCartBtn.addEventListener("click", e => {
+                e.preventDefault();
+                updateCartDisplay();
+                const cartModal = new bootstrap.Modal(document.getElementById("cartModal"));
+                cartModal.show();
+            });
+        }
+
+        // Quand on ouvre le modal client, mettre à jour le prix total affiché
+        const orderSelectedBtn = document.getElementById("orderSelected");
+        if (orderSelectedBtn) {
+            orderSelectedBtn.addEventListener("click", () => {
+                setTimeout(updateClientTotalPrice, 100); // attendre l'ouverture du modal
+            });
+        }
+
+        // Supprimer un article du panier
+        document.getElementById("cart-items").addEventListener("click", function (e) {
+            const btnRemove = e.target.closest(".remove-item");
+            if (btnRemove) {
+                const idx = parseInt(btnRemove.getAttribute("data-index"));
+                if (!isNaN(idx)) {
+                    cart.splice(idx, 1);
+                    updateCartDisplay();
+                }
+            }
+        });
+
+        // Commander la sélection
+        document.getElementById("orderSelected").addEventListener("click", () => {
+            const selectedIndexes = Array.from(document.querySelectorAll(".cart-checkbox:checked"))
+                .map(cb => parseInt(cb.value))
+                .filter(i => !isNaN(i) && cart[i]);
+
+            if (selectedIndexes.length === 0) {
+                return alert("Veuillez sélectionner au moins un produit à commander.");
+            }
+
+            const selectedItems = selectedIndexes.map(i => cart[i]);
+            document.getElementById("selected-product-name").value = JSON.stringify(selectedItems);
+
+            const clientModal = new bootstrap.Modal(document.getElementById("clientModal"));
+            clientModal.show();
+        });
+
+
+        // compteur des prix
+        function updateCartTotal() {
+            let total = 0;
+            const checkboxes = document.querySelectorAll(".cart-checkbox:checked");
+            checkboxes.forEach(cb => {
+                const index = parseInt(cb.value);
+                if (!isNaN(index) && cart[index]) {
+                    const item = cart[index];
+                    total += parseFloat(item.price) * item.quantity;
+                }
+            });
+
+            document.getElementById("cart-total-price").textContent = total.toFixed(2);
+            // Mettre à jour aussi le total dans le modal client si ouvert
+            const clientTotal = document.getElementById("client-total-price");
+            if (clientTotal) clientTotal.textContent = total.toFixed(2);
+        }
+
+
+
+
+        // Soumission du formulaire client
+        document.getElementById("client-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Récupération des données du formulaire
+            const formData = new FormData(e.target);
+            const selectedItems = JSON.parse(document.getElementById("selected-product-name").value || '[]');
+
+            // Validation du panier
+            if (selectedItems.length === 0) {
+                alert("Votre panier est vide ou aucun article n'a été sélectionné.");
+                return;
+            }
+
+            // Calculer le total à partir des articles sélectionnés
+            const total = selectedItems.reduce((acc, item) => acc + (parseFloat(item.price) * item.quantity), 0);
+
+            // Préparation des données
+            const commandeData = {
+                nom: formData.get("nom"),
+                email: formData.get("email"),
+                telephone: formData.get("telephone"),
+                adresse: formData.get("adresse"),
+                codepostal: formData.get("codepostal"),
+                ville: formData.get("ville"),
+                livraison: formData.get("livraison"),
+                produits: selectedItems.map(item => ({
+                    name: item.name,
+                    price: item.price,
+                    quantity: item.quantity,
+                    image: item.image
+                })),
+                total: total.toFixed(2) // Utiliser le total calculé
+            };
+
+            // Validation des champs requis
+            if (!commandeData.nom || !commandeData.email || !commandeData.telephone || !commandeData.livraison) {
+                alert("Veuillez remplir tous les champs obligatoires");
+                return;
+            }
+
+            // Validation de l'email
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(commandeData.email)) {
+                alert("Veuillez entrer une adresse email valide");
+                return;
+            }
+
+            // Envoi de la commande
+            fetch("http://localhost/Test/projet-pfe/backend/commande.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(commandeData)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(err => { throw new Error(err.message || 'Erreur réseau'); });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        const recap = `
+                Merci ${commandeData.nom} !\n
+                Votre commande a bien été enregistrée.\n
+                Détails:\n
+                - Produits: ${commandeData.produits.map(p => `${p.name} (x${p.quantity})`).join(', ')}\n
+                - Total: ${commandeData.total} €\n
+                - Livraison: ${commandeData.livraison}\n
+                ${commandeData.livraison === 'livraison' ?
+                                `- Adresse: ${commandeData.adresse}, ${commandeData.codepostal} ${commandeData.ville}` : ''}\n
+                - Contact: ${commandeData.telephone}
+            `;
+
+                        alert(recap);
+
+                        // Réinitialisation
+                        e.target.reset();
+                        // Vider uniquement les articles commandés du panier
+                        const commandedNames = commandeData.produits.map(p => p.name);
+                        const updatedCart = cart.filter(item => !commandedNames.includes(item.name));
+                        localStorage.setItem('cart', JSON.stringify(updatedCart));
+                        updateCartDisplay();
+
+                        // Fermeture de la modal
+                        const clientModal = bootstrap.Modal.getInstance(document.getElementById("clientModal"));
+                        clientModal.hide();
+                    } else {
+                        throw new Error(data.message || "Erreur lors de la commande");
+                    }
+                })
+                .catch(error => {
+                    console.error("Erreur:", error);
+                    alert("Une erreur est survenue: " + error.message);
+                });
+
+        });
+
+        // Initialiser l'affichage du panier au chargement de la page
+        document.addEventListener("DOMContentLoaded", updateCartDisplay);
+    </script>
+
+</body>
+
+</html>
